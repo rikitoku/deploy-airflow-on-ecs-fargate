@@ -14,6 +14,7 @@ resource "aws_ssm_parameter" "airflow_ecs_cloudwatch_agent_config" {
   name        = "airflow-ecs-cloudwatch-agent-config"
   type        = "String"
   description = "CloudWatch agent configuration file for airflow ECS cluster"
+  overwrite   = true
   value = jsonencode(
     {
       agent = {

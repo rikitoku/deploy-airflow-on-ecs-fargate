@@ -108,7 +108,7 @@ resource "aws_iam_role_policy_attachment" "airflow_firehose_put_record_batch" {
 
 # Allow ECS services to read secrets from AWS Secret Manager.
 resource "aws_iam_policy" "secret_manager_read_secret" {
-  name        = "secretManagerReadSecret"
+  name        = "secretManagerReadSecret2"
   description = "Grants read, list and describe permissions on SecretManager secrets"
   policy = jsonencode({
     Version = "2012-10-17"
